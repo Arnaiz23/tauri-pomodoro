@@ -16,7 +16,7 @@ export default function Controls() {
     <section className="w-full h-full grid place-items-center pb-4">
       <button
         onClick={handleClick}
-        className="capitalize p-5 rounded-full border border-white aspect-square text-xl font-bold"
+        className="capitalize p-5 rounded-full border dark:border-white border-[#484b6a] aspect-square text-xl font-bold"
       >
         {counterState}
       </button>

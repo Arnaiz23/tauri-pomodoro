@@ -29,7 +29,7 @@ export default function HeaderOptions({
 
   return (
     <li
-      className={`${active && "bg-zinc-500"} hover:bg-zinc-500 p-2 rounded-xl`}
+      className={`${active && "dark:bg-zinc-500 bg-[#d2d3db]"} dark:hover:bg-zinc-500 hover:bg-[#d2d3db] p-2 rounded-xl`}
     >
       <button className="capitalize" onClick={handleClick}>
         {title.toLowerCase()}
