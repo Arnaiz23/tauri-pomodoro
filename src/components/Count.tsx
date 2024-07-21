@@ -32,6 +32,7 @@ export default function Count() {
       const timeout = setTimeout(async () => {
         const newTime = counterType - 1;
         if (newTime < 0) {
+          new Audio("/game-over.wav").play()
           let permissionGranted = await isPermissionGranted();
           if (!permissionGranted) {
             const permission = await requestPermission();
@@ -45,10 +46,6 @@ export default function Count() {
           }
 
           if (actualCounterType === "pomodoro") {
-            console.log({
-              state: arrayState.pomodoro,
-              a: arrayState.pomodoro % 5 === 0,
-            });
             if (arrayState.pomodoro % 5 === 0 && arrayState.pomodoro > 0) {
               changeActualType("long_break");
               setCounterType(COUNTERS.LONG_BREAK);
